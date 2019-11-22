@@ -1,0 +1,17 @@
+<div class="container-fluid content-component blogs-section">
+  <div class="title text-center">My Blogs</div>
+  <div class="blogs row m-2" *ngFor="let item of blog; let i = index">
+    <div class="blog-title w-100 border rounded" id="{{ item['id'] }}">
+      <a class="p-3 font-weight-bold" href="{{ item['url'] }}" target="_blank">
+        {{ item["title"] }}</a
+      >
+      <div class="labels text-capitalize">
+        <span
+          class="float-right p-1 text-muted"
+          *ngFor="let labels of item['labels']"
+          >{{ labels }}</span
+        >
+      </div>
+    </div>
+  </div>
+</div>
