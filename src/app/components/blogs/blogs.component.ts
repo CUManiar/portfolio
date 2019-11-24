@@ -7,7 +7,7 @@ import { BloggerService } from "src/app/services/blogger.service";
   styleUrls: ["./blogs.component.scss"]
 })
 export class BlogsComponent implements OnInit {
-  blog: Array<Object>;
+  blog: Array<object>;
 
   constructor(private bloggerService: BloggerService) {}
 

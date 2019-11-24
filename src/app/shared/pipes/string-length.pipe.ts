@@ -4,7 +4,7 @@ import { Pipe, PipeTransform } from "@angular/core";
   name: "stringLength"
 })
 export class StringLengthPipe implements PipeTransform {
-  transform(value: any, args: string): any {
+  transform(value: any, args: any): any {
     const limit = args ? parseInt(args, 10) : 10;
     const trail = "...";
 

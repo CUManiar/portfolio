@@ -1,9 +1,17 @@
 <div class="container-fluid content-component blogs-section">
   <div class="title text-center">My Blogs</div>
+
+  <span class="text-danger h6"> * Click to visit the blog</span>
   <div class="blogs row m-2" *ngFor="let item of blog; let i = index">
-    <div class="blog-title w-100 border rounded" id="{{ item['id'] }}">
+    <div
+      class="blog-title w-100 border rounded"
+      id="{{ item['id'] }}"
+      data-toggle="tooltip"
+      title="{{ item['title'] }}"
+      data-placement="top"
+    >
       <a class="p-3 font-weight-bold" href="{{ item['url'] }}" target="_blank">
-        {{ item["title"] }}</a
+        {{ item["title"] | stringLength: 60 }}</a
       >
       <div class="labels text-capitalize">
         <span

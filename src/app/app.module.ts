@@ -14,6 +14,7 @@ import { ContactComponent } from "./components/contact/contact.component";
 import { HomeComponent } from "./components/home/home.component";
 import { StringFormatPipe } from "./shared/pipes/string-format.pipe";
 import { ReactiveFormsModule } from "@angular/forms";
+import { StringLengthPipe } from './shared/pipes/string-length.pipe';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ReactiveFormsModule } from "@angular/forms";
     ProjectsComponent,
     ContactComponent,
     HomeComponent,
-    StringFormatPipe
+    StringFormatPipe,
+    StringLengthPipe
   ],
   imports: [
     BrowserModule,

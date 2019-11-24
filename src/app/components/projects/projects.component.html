@@ -35,7 +35,7 @@
           {{ items["description"] ? items["description"] : " - " }}
         </p>
         <a
-          href="{{ items['homepage'] ? items['homepage'] : items['url'] }}"
+          href="{{ items['homepage'] ? items['homepage'] : items['html_url'] }}"
           class="btn btn-primary text p-1"
           [ngClass]="items['homepage'] ? 'btn-success' : 'btn-danger'"
           target="_blank"
