@@ -1,61 +1,101 @@
 <div class="container-fluid content-section">
   <div class="contact-form">
     <div class="contact-image">
-      <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact" />
+      <img
+        src="https://image.ibb.co/kUagtU/rocket_contact.png"
+        alt="rocket_contact"
+      />
     </div>
     <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-      <h3>Drop me a Message</h3>
       <span class="text-danger"><strong>*</strong> Mandatory fields</span>
+      <h3>Drop me a Message</h3>
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <input type="text" name="txtName" class="form-control" [ngClass]="{
+            <input
+              type="text"
+              name="txtName"
+              class="form-control"
+              [ngClass]="{
                 'has-error':
                   contactForm.get('name').errors &&
                   (contactForm.get('name').touched ||
                     contactForm.get('name').dirty)
-              }" formControlName="name" placeholder="Your Name *" />
-            <span class="text-danger pl-2" *ngIf="
+              }"
+              formControlName="name"
+              placeholder="Your Name *"
+            />
+            <span
+              class="text-danger pl-2"
+              *ngIf="
                 contactForm.get('name').errors &&
                 (contactForm.get('name').touched ||
                   contactForm.get('name').dirty)
-              ">
-              <span *ngIf="contactForm.get('name').errors.required">Name is Required</span>
+              "
+            >
+              <span *ngIf="contactForm.get('name').errors.required"
+                >Name is Required</span
+              >
             </span>
           </div>
 
           <div class="form-group">
-            <input type="email" name="txtEmail" class="form-control" [ngClass]="{
+            <input
+              type="email"
+              name="txtEmail"
+              class="form-control"
+              [ngClass]="{
                 'has-error':
                   contactForm.get('email').errors &&
                   (contactForm.get('email').touched ||
                     contactForm.get('email').dirty)
-              }" formControlName="email" placeholder="Your Email *" />
+              }"
+              formControlName="email"
+              placeholder="Your Email *"
+            />
           </div>
           <div class="form-group">
-            <input type="number" name="txtPhone" class="form-control" [ngClass]="{
+            <input
+              type="number"
+              name="txtPhone"
+              class="form-control"
+              [ngClass]="{
                 'has-error':
                   contactForm.get('contact').errors &&
                   (contactForm.get('contact').touched ||
                     contactForm.get('contact').dirty)
-              }" formControlName="contact" placeholder="Your Phone Number *" />
+              }"
+              formControlName="contact"
+              placeholder="Your Phone Number *"
+            />
           </div>
           <div class="form-group">
-            <button type="submit" name="btnSubmit" [disabled]="!contactForm.valid"
-              [ngClass]="{ 'btn-danger': !contactForm.valid }" class="btnContact btn-success btn-block form-button">
+            <button
+              type="submit"
+              name="btnSubmit"
+              [disabled]="!contactForm.valid"
+              [ngClass]="{ 'btn-danger': !contactForm.valid }"
+              class="btnContact btn-success btn-block form-button"
+            >
               Send Message
             </button>
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <textarea name="txtMsg" class="form-control" placeholder="Your Message *" formControlName="message"
+            <textarea
+              name="txtMsg"
+              class="form-control"
+              placeholder="Your Message *"
+              formControlName="message"
               [ngClass]="{
                 'has-error':
                   contactForm.get('message').errors &&
                   (contactForm.get('message').touched ||
                     contactForm.get('message').dirty)
-              }" style="width: 100%; height: 150px;"></textarea>
+              }"
+              style="width: 100%; height: 150px;"
+            ></textarea>
           </div>
         </div>
       </div>
