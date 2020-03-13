@@ -10,7 +10,7 @@ import { ProjectDetails } from "src/app/models/project_details.model";
 export class ProjectsComponent implements OnInit {
   project_details: Array<ProjectDetails>;
 
-  constructor(private projectService: ProjectsService) {}
+  constructor(private projectService: ProjectsService) { }
 
   ngOnInit() {
     // Retrieve all repositories

@@ -7,39 +7,18 @@
     <span class="text-info"> Published! Live available</span>
   </div>
   <div class="projects">
-    <div
-      class="content"
-      *ngFor="let items of project_details; let i = index"
-      data-toggle="tooltip"
-      title="{{ items['name'] | stringFormat }}"
-      data-placement="top"
-    >
-      <img
-        class="card-img-top"
-        src="https://robohash.org/{{ i }}"
-        alt="project image"
-        height="100"
-      />
+    <div class="content" *ngFor="let items of project_details; let i = index" data-toggle="tooltip"
+      title="{{ items['name'] | stringFormat }}" data-placement="top">
+      <img class="card-img-top" src="https://robohash.org/{{ i }}" alt="project image" height="100" />
       <div class="card-body text-center">
         <h5 class="card-title capitalize text">
-          <a href="{{ items['url'] }} " id="{{ i }}" data-placement="top">{{
-            items["name"] | stringFormat
-          }}</a>
+          <a href="{{ items['html_url'] }} " id="{{ i }}" data-placement="top">{{ items["name"] | stringFormat }}</a>
         </h5>
-        <p
-          class="card-text text"
-          data-toggle="tooltip"
-          title="{{ items['description'] }}"
-          data-placement="top"
-        >
+        <p class="card-text text" data-toggle="tooltip" title="{{ items['description'] }}" data-placement="top">
           {{ items["description"] ? items["description"] : " - " }}
         </p>
-        <a
-          href="{{ items['homepage'] ? items['homepage'] : items['html_url'] }}"
-          class="btn btn-primary text p-1"
-          [ngClass]="items['homepage'] ? 'btn-success' : 'btn-danger'"
-          target="_blank"
-          >Visit Application
+        <a href="{{ items['homepage'] ? items['homepage'] : items['html_url'] }}" class="btn btn-primary text p-1"
+          [ngClass]="items['homepage'] ? 'btn-success' : 'btn-danger'" target="_blank">Visit Application
         </a>
       </div>
     </div>
